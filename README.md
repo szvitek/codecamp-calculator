@@ -1,18 +1,37 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite Calculator
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+About
 
-## Recommended IDE Setup
+This project is part of freeCodeCamp's frontend libraries curriculum. Objective: Build an app that is functionally similar to this: https://javascript-calculator.freecodecamp.rocks/.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## User stories
 
-## Type Support For `.vue` Imports in TS
+- [x] User Story #1: My calculator should contain a clickable element containing an = (equal sign) with a corresponding id="equals".
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [x] User Story #2: My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: id="zero", id="one", id="two", id="three", id="four", id="five", id="six", id="seven", id="eight", and id="nine".
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- [x] User Story #3: My calculator should contain 4 clickable elements each containing one of the 4 primary mathematical operators with the following corresponding IDs: id="add", id="subtract", id="multiply", id="divide".
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- [x] User Story #4: My calculator should contain a clickable element containing a . (decimal point) symbol with a corresponding id="decimal".
+
+- [x] User Story #5: My calculator should contain a clickable element with an id="clear".
+
+- [x] User Story #6: My calculator should contain an element to display values with a corresponding id="display".
+
+- [] User Story #7: At any time, pressing the clear button clears the input and output values, and returns the calculator to its initialized state; 0 should be shown in the element with the id of display.
+
+- [] User Story #8: As I input numbers, I should be able to see my input in the element with the id of display.
+
+- [] User Story #9: In any order, I should be able to add, subtract, multiply and divide a chain of numbers of any length, and when I hit =, the correct result should be shown in the element with the id of display.
+
+- [] User Story #10: When inputting numbers, my calculator should not allow a number to begin with multiple zeros.
+
+- [] User Story #11: When the decimal element is clicked, a . should append to the currently displayed value; two . in one number should not be accepted.
+
+- [] User Story #12: I should be able to perform any operation (+, -, \*, /) on numbers containing decimal points.
+
+- [] User Story #13: If 2 or more operators are entered consecutively, the operation performed should be the last operator entered (excluding the negative (-) sign). For example, if 5 + _ 7 = is entered, the result should be 35 (i.e. 5 _ 7); if 5 _ - 5 = is entered, the result should be -25 (i.e. 5 _ (-5)).
+
+- [] User Story #14: Pressing an operator immediately following = should start a new calculation that operates on the result of the previous evaluation.
+
+- [] User Story #15: My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places).
